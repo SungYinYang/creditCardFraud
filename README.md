@@ -13,8 +13,16 @@ This dataset presents transactions that occurred in two days, where we have 492 
 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
+### Data Preprocessing
+
+#### Reove Outliers
+As the graph shown below, there are outlier in the dataset.
+Outliers are remove to perform better ML accuracy.
+![r1](https://user-images.githubusercontent.com/54567577/107547568-7226d480-6b82-11eb-9664-05dde3b06f02.png)
+
 ### Result
 
+#### Logistic Regression
 ![result](https://user-images.githubusercontent.com/54567577/107547376-38ee6480-6b82-11eb-902f-7388d6406559.png)
 
 Given the class imbalance ratio, the competition recommend measuring the accuracy using the Area Under the Precision-Recall Curve (AUPRC)
